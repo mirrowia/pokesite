@@ -1,0 +1,22 @@
+:root {
+  --main-red-color: #f04037;
+  --main-logo-color: #ffcc03;
+  --sec-logo-color: #375f95;
+}
+
+@font-face {
+  font-family: Pokemon;
+  src: url("/public/fonts/Pokemon.ttf");
+}
+
+.navbar {
+  background-color: var(--main-red-color);
+}
+
+.navbar h1 {
+  margin: 0;
+  font-size: 5rem;
+  -webkit-text-stroke: 0.05rem var(--sec-logo-color);
+  color: var(--main-logo-color);
+  font-family: pokemon;
+}
