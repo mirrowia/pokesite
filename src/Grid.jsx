@@ -1,7 +1,7 @@
 import "./Grid.css";
 import axios from "./AxoisConfig/AxiosConfig";
 import { useEffect, useState } from "react";
-import MiniCard from "./MiniCard";
+import MiniCard from "./MiniCard/MiniCard";
 
 function Grid() {
   const [list, setList] = useState([]);
