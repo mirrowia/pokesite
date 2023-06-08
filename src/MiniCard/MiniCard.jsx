@@ -23,6 +23,10 @@ function MiniCard(props) {
   return (
     <>
       <div className="mini-card">
+        <div className="info-card-container">
+          <InfoCard pokemon={pokemon} />
+        </div>
+
         <img
           src={pokemon.sprites.front_default}
           alt={pokemon.name}
@@ -33,7 +37,6 @@ function MiniCard(props) {
           {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
         </p>
       </div>
-      <InfoCard pokemon={pokemon} />
     </>
   );
 }

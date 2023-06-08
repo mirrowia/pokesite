@@ -1,5 +1,7 @@
 .mini-card {
-  display: flex;
+  position: relative;
+  display: block;
+
   flex-direction: column;
   justify-content: center;
   border: double black 3px;
@@ -21,4 +23,11 @@
   border-top: solid black 1px;
   text-align: center;
   margin: 0px;
+}
+
+.info-card-container {
+  background-color: rgb(253, 253, 253);
+  position: absolute;
+  left: 120%;
+  top: -5%;
 }

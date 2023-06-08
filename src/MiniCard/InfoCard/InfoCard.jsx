@@ -19,33 +19,61 @@ function InfoCard(props) {
           alt={pokemon.name}
           className="info-card-img"
         />
-        <p className="mini-card-id">#{pokemon.id}</p>
-        <p className="mini-card-name">
-          {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-        </p>
-        <div className="grid-stats">
-          <p className="info-card-stats grid-stats-left">height</p>
-          <p className="info-card-stats grid-stats-right">{pokemon.height}</p>
-          {pokemon.stats.map((stat) => {
-            return (
-              <>
-                <p className="info-card-stats grid-stats-left">
-                  {stat.stat.name}
-                </p>
-                <p className="info-card-stats grid-stats-right">
-                  {stat.base_stat}
-                </p>
-              </>
-            );
-          })}
-          <p className="info-card-stats grid-stats-left">types</p>
-          {pokemon.types.map((type) => {
-            return (
-              <p className="info-card-stats grid-stats-right">
-                {type.type.name}
-              </p>
-            );
-          })}
+        <div className="info-card-stat-container">
+          <div className="left-info">
+            <p>id</p>
+          </div>
+          <div className="right-info">
+            <p>{pokemon.id}</p>
+          </div>
+        </div>
+        <div className="info-card-stat-container">
+          <div className="left-info">
+            <p>height</p>
+          </div>
+          <div className="right-info">
+            <p>{pokemon.height}</p>
+          </div>
+        </div>
+        <div className="info-card-stat-container">
+          <div className="left-info">
+            <p>weight</p>
+          </div>
+          <div className="right-info">
+            <p>{pokemon.weight}</p>
+          </div>
+        </div>
+        {pokemon.stats.map((stat) => {
+          return (
+            <div className="info-card-stat-container">
+              <div className="left-info">
+                <p>{stat.stat.name}</p>
+              </div>
+              <div className="right-info">
+                <p>{stat.base_stat}</p>
+              </div>
+            </div>
+          );
+        })}
+        <div className="info-card-stat-container">
+          <div className="left-info">
+            <p>abilities</p>
+          </div>
+          <div className="right-info">
+            {pokemon.abilities.map((ability) => {
+              return <p>{ability.ability.name}</p>;
+            })}
+          </div>
+        </div>
+        <div className="info-card-stat-container">
+          <div className="left-info">
+            <p>types</p>
+          </div>
+          <div className="right-info">
+            {pokemon.types.map((type) => {
+              return <p>{type.type.name}</p>;
+            })}
+          </div>
         </div>
       </div>
     </>

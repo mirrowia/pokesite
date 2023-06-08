@@ -22,9 +22,7 @@ function Grid() {
   return (
     <>
       <div className="cards-container">
-        {list.map((pokemon) => {
-          return <MiniCard key={pokemon.name} id={pokemon.name} />;
-        })}
+        <MiniCard key="gardevoir" id="gardevoir" />
       </div>
     </>
   );

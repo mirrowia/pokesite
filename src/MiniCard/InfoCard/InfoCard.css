@@ -3,28 +3,35 @@
   flex-direction: column;
   justify-content: center;
   border: double black 3px;
-  width: 240px;
-  margin: 15px;
+  width: 300px;
 }
 
 .info-card-img {
-  width: 240px;
+  width: 300px;
 }
 
-.grid-stats {
-  display: grid;
-  border-top: solid black 1px;
+.info-card-stat-container {
+  display: flex;
+  border-top: solid #bebebe 1px;
 }
 
-.grid-stats-left {
-  grid-column: 1 / 2;
+.left-info {
+  /*  background-color: pink;*/
+  flex: 1;
+  padding-right: 5px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 
-.grid-stats-right {
-  grid-column: 2 / 2;
+.right-info {
+  /*  background-color: lightblue;*/
+  flex: 1;
+  padding-left: 5px;
 }
 
-.info-card-stats {
-  border-top: solid #e1e1e1 1px;
+.left-info p,
+.right-info p {
   margin: 0;
+  padding: 5px 0;
 }
