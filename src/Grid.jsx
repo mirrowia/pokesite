@@ -7,6 +7,7 @@ function Grid() {
   const [list, setList] = useState([]);
   const [offset, setOffset] = useState(0);
   const [limit, setLimit] = useState(100);
+  const [opened, setOpened] = useState();
 
   const getPokemonList = async () => {
     const response = await axios.get(`pokemon?offset=${offset}&limit=${limit}`);
@@ -22,7 +23,8 @@ function Grid() {
   return (
     <>
       <div className="cards-container">
-        <MiniCard key="gardevoir" id="gardevoir" />
+        <MiniCard key="gardevoir" id="gardevoir" isActive="true"/>
+        <MiniCard key="alakazam" id="alakazam" isActive=""/>
       </div>
     </>
   );

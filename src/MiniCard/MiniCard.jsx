@@ -12,6 +12,11 @@ function MiniCard(props) {
     setPokemon(response.data);
   };
 
+  if(props.isActive == "true"){
+    
+    console.log(document.getElementById(pokemon.id))
+  }
+
   useEffect(() => {
     getPokemon();
   }, []);
@@ -21,23 +26,21 @@ function MiniCard(props) {
   if (!pokemon) return null;
 
   return (
-    <>
-      <div className="mini-card">
-        <div className="info-card-container">
-          <InfoCard pokemon={pokemon} />
-        </div>
-
-        <img
-          src={pokemon.sprites.front_default}
-          alt={pokemon.name}
-          className="mini-card-img"
-        />
-        <p className="mini-card-id">#{pokemon.id}</p>
-        <p className="mini-card-name">
-          {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
-        </p>
+    <div key={pokemon.id} className="mini-card">
+      <div className="info-card-container">
+        <InfoCard pokemon={pokemon} />
       </div>
-    </>
+
+      <img
+        src={pokemon.sprites.front_default}
+        alt={pokemon.name}
+        className="mini-card-img"
+      />
+      <p className="mini-card-id">#{pokemon.id}</p>
+      <p className="mini-card-name">
+        {pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1)}
+      </p>
+    </div>
   );
 }
 
