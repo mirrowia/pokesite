@@ -1,5 +1,5 @@
-import Grid from "./Grid";
-import Navbar from "./Nav/Navbar";
+import Grid from "./Pages/pokemon-list";
+import Navbar from "./Components/Navbar";
 
 function Main() {
   return (

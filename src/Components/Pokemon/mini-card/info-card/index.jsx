@@ -1,19 +1,16 @@
-import "./InfoCard.css";
-import axios from "../../AxoisConfig/AxiosConfig";
+import "./index.css";
 import { useEffect, useState } from "react";
 
 function InfoCard(props) {
   const [pokemon, setPokemon] = useState(props.pokemon);
-
-  useEffect(() => {}, []);
 
   useEffect(() => {}, [pokemon]);
 
   if (!pokemon) return null;
 
   return (
-    <div key={pokemon.id} className="info-card">
-    <i className="bi bi-x icon-exit"/>
+    <div key={pokemon.id} className="info-card ">
+      <i className="bi bi-x icon-exit" />
       <img
         src={pokemon.sprites.front_default}
         alt={pokemon.name}

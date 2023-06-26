@@ -26,9 +26,9 @@
 }
 
 .info-card-container {
-  visibility: hidden;
   background-color: rgb(253, 253, 253);
   position: absolute;
+  z-index:  1;
   left: 120%;
   top: -5%;
 }
